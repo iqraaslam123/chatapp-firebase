@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <link rel="shortcut icon" href="./images/signup.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- 🌈 LEFT ANIMATED INFO PANEL -->
+    <div class="info-panel">
+      <h1>ChitChat App <br>
+        <span class="name">Created by Iqra Aslam</span>
+      </h1>
+      <h2>Welcome 💫</h2>
+      <p>Join us by creating an account, logging in, or using Google to continue!</p>
+      <ul>
+        <li>✨ Sign up to get started</li>
+        <li>🔐 Login to access your dashboard</li>
+        <li>🌍 Continue with Google for quick access</li>
+        <li>📞 Gossips and fun with your friends</li>
+
+      </ul>
+     
+        
+    </div>
+    
+
+    <!-- 🌸 RIGHT SIGNUP FORM -->
+    <div class="container">
+      <div class="progress-container">
+        <div class="step" id="step1">1</div>
+        <div class="line"></div>
+        <div class="step" id="step2">2</div>
+        <div class="line"></div>
+        <div class="step" id="step3">3</div>
+      </div>
+
+      <h1>Sign Up 💕</h1>
+      <input type="email" id="email" placeholder="Enter your Email" required>
+
+      <div class="password-field">
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <button id="signup-btn">SignUp 😊</button>
+      <button id="login-btn">Login 🤗</button>
+
+      <button id="google-btn">
+        <img src="./images/google.png" alt="" height="15" width="15">
+        Continue with Google
+      </button>
+
+      <p>Use any email (password ≥ 6 chars). After signup/login you'll choose a username.</p>
+    </div>
+      
+  
+  </div>
+<footer>
+  
+</footer>
+
+  <script>
+    document.getElementById("step1").classList.add("active");
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

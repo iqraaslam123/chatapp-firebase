@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="progress-container">
+  <div class="step" id="step1">1</div>
+  <div class="line"></div>
+  <div class="step" id="step2">2</div>
+  <div class="line"></div>
+  <div class="step" id="step3">3</div>
+</div>
+
+    <div class="container">
+        <h1>User name</h1>
+        <input type="text" id="username" placeholder="Enter your User name" required>
+        <button id="username-btn">✅ OK</button>
+     
+           <p>This name will appear to others in the chat.</p>
+    </div>
+    <script>
+  document.getElementById("step1").classList.add("completed");
+  document.querySelectorAll(".line")[0].classList.add("active");
+  document.getElementById("step2").classList.add("active");
+</script>
+
+      <script type="module" src="./script.js"></script>
+</body>
+</html>

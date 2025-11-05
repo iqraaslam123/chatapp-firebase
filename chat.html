@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress-container">
+  <div class="step" id="step1">1</div>
+  <div class="line"></div>
+  <div class="step" id="step2">2</div>
+  <div class="line"></div>
+  <div class="step" id="step3">3</div>
+</div>
+
+  
+  <button id="theme-toggle" class="theme-btn">🎨 Change Theme</button>
+  <br>
+  <button id="logout-btn">Logout</button>  
+  <div class="container">
+    
+    
+      <h2>welcome ♥
+  <span id="display-name"></span>
+  <br>
+ 
+</h2>
+
+
+<div class="messages-box" id="messages"></div><br>
+
+<input type="text" id="message" placeholder="Type your message here...">
+<button onclick="sendMessage()">Send</button>
+
+
+  </div>
+  
+
+   <script>
+  document.getElementById("step1").classList.add("completed");
+  document.getElementById("step2").classList.add("completed");
+  document.querySelectorAll(".line").forEach(line => line.classList.add("active"));
+  document.getElementById("step3").classList.add("active");
+</script>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
