@@ -14,7 +14,7 @@ body {
   background: radial-gradient(circle at top left, #a18cd1, #fbc2eb);
   animation: bgMove 10s infinite alternate ease-in-out;
   transition: background 0.8s ease;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 @keyframes bgMove {
@@ -784,5 +784,630 @@ button:hover {
   }
   @keyframes slideDown {
     to { transform: translateY(0); }
+  }
+}
+/* 🌸 RESPONSIVE DESIGN FIX */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .info-panel {
+    width: 100%;
+    padding: 40px 25px;
+    text-align: center;
+    animation: none; /* disable slide-in animation */
+  }
+
+  .info-panel h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .info-panel h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-panel ul {
+    padding: 0;
+  }
+
+  .info-panel li {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    padding: 15px;
+  }
+
+  .main-container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .info-panel {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .info-panel h1 {
+    font-size: 1.6rem;
+  }
+
+  .info-panel p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  input, button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #google-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  #google-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .step {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .line {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-panel h1 {
+    font-size: 1.4rem;
+  }
+
+  .info-panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .info-panel li {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #google-btn img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 🌸 RESPONSIVE FIXES FOR ALL PAGES */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .info-panel {
+    width: 100%;
+    padding: 40px 25px;
+    text-align: center;
+    transform: translateX(0);
+    animation: none;
+  }
+
+  .info-panel h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .info-panel h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-panel ul {
+    padding: 0;
+  }
+
+  .info-panel li {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+
+  /* Progress container fixes for all pages */
+  .progress-container {
+    position: relative;
+    top: 0;
+    margin: 20px auto;
+    transform: none;
+  }
+
+  /* Chat page specific fixes */
+  .container {
+    margin-top: 60px;
+    width: 95%;
+    max-width: none;
+    padding: 25px 20px;
+  }
+
+  .messages-box {
+    height: 300px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+
+  /* Theme and logout buttons */
+  #theme-toggle, #logout-btn {
+    position: relative;
+    top: 0;
+    margin: 10px;
+    width: auto;
+    display: inline-block;
+  }
+
+  /* Main container for signup page */
+  .main-container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 10px 0;
+  }
+
+  .info-panel {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .info-panel h1 {
+    font-size: 1.6rem;
+  }
+
+  .info-panel p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  input, button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #google-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  #google-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .step {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .line {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .info-panel h1 {
+    font-size: 1.4rem;
+  }
+
+  .info-panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .info-panel li {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 20px 15px;
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #google-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .messages-box {
+    height: 250px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .bubble {
+    padding: 8px 30px 15px 8px;
+  }
+
+  .time {
+    font-size: 9px;
+  }
+
+  .step {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 25px;
+  }
+
+  #theme-toggle, #logout-btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    margin: 5px;
+  }
+}
+
+/* Additional fixes for very small screens */
+@media (max-width: 320px) {
+  .container {
+    padding: 15px 10px;
+  }
+
+  .progress-container {
+    gap: 5px;
+  }
+
+  .step {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+
+  .line {
+    width: 20px;
+  }
+
+  .messages-box {
+    height: 200px;
+  }
+}
+
+/* Ensure body scrolls properly on mobile */
+body {
+  overflow-y: auto;
+}
+
+/* Fix for username page container positioning */
+body > .container {
+  margin-top: 80px;
+}
+
+/* Fix for chat page layout */
+body > .progress-container + .container {
+  margin-top: 80px;
+}
+
+/* 🔧 CHAT PAGE SPECIFIC RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  /* Fix body layout for chat page */
+  body {
+    display: block;
+    padding: 10px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Progress steps positioning */
+  .progress-container {
+    position: fixed !important;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Theme and logout buttons */
+  #theme-toggle, #logout-btn {
+    position: fixed !important;
+    top: 70px;
+    z-index: 1000;
+    width: auto;
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  #theme-toggle {
+    left: 10px;
+  }
+
+  #logout-btn {
+    right: 10px;
+  }
+
+  /* Main chat container */
+  .container {
+    margin-top: 120px !important;
+    width: 95%;
+    max-width: none;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Messages box */
+  .messages-box {
+    height: 50vh !important;
+    min-height: 300px;
+    max-height: 500px;
+    margin-bottom: 15px;
+  }
+
+  /* Message bubbles */
+  .message {
+    max-width: 85%;
+    min-width: 120px;
+  }
+
+  /* Input area */
+  #message {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Send button */
+  button[onclick="sendMessage()"] {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Display name */
+  #display-name {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container {
+    top: 5px;
+    width: 95%;
+  }
+
+  .step {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 20px;
+  }
+
+  #theme-toggle, #logout-btn {
+    top: 60px;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+
+  .container {
+    margin-top: 100px !important;
+    padding: 15px 10px;
+  }
+
+  .messages-box {
+    height: 45vh !important;
+    min-height: 250px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  #display-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+  .progress-container {
+    padding: 5px 10px;
+  }
+
+  .step {
+    width: 22px;
+    height: 22px;
+  }
+
+  .line {
+    width: 15px;
+  }
+
+  .container {
+    margin-top: 90px !important;
+    padding: 10px 8px;
+  }
+
+  .messages-box {
+    height: 40vh !important;
+    min-height: 200px;
+  }
+
+  .bubble {
+    padding: 6px 25px 12px 6px;
+    font-size: 0.9rem;
+  }
+
+  .time {
+    font-size: 0.7rem;
+  }
+}
+
+/* Ensure chat page has proper scrolling */
+body:has(.messages-box) {
+  overflow-y: auto;
+}
+
+/* Fix message actions on mobile */
+@media (max-width: 768px) {
+  .msg-actions {
+    display: flex !important;
+    gap: 8px;
+    opacity: 0.7;
+  }
+
+  .message:hover .msg-actions {
+    opacity: 1;
+  }
+
+  .edit-icon, .delete-icon {
+    font-size: 14px;
+    padding: 4px;
+  }
+}
+
+/* Fix avatar size on mobile */
+@media (max-width: 768px) {
+  .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Input and button sizing fix */
+@media (max-width: 768px) {
+  #message {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 15px;
+  }
+
+  button[onclick="sendMessage()"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Safe area support for notch phones */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    body {
+      padding-left: max(10px, env(safe-area-inset-left));
+      padding-right: max(10px, env(safe-area-inset-right));
+      padding-top: max(10px, env(safe-area-inset-top));
+    }
+    
+    .progress-container {
+      margin-top: env(safe-area-inset-top);
+    }
   }
 }
